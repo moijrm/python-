@@ -1,0 +1,30 @@
+A SAVOIR
+
+couleur pour code:
+
+
+/033[31m → commence le texte en rouge
+
+\033[32m → commence le texte en vert
+
+\033[0m → revient à la couleur normale
+
+a mettre entre le [ et le m
+Code	Couleur
+30	Noir
+31	Rouge
+32	Vert
+33	Jaune
+34	Bleu
+35	Magenta
+36	Cyan
+37	Blanc
+
+-creation de fichier-
+Les modes importants :
+
+"w" → écrire (écrase le contenu)
+
+"a" → ajouter à la fin
+
+"r" → lire
