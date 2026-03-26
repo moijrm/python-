@@ -30,19 +30,15 @@ while True:
     except ValueError:
         print("Invalid value")
         continue
-    
     if operator == "+":
         result = addition(first,second)
-        print(result)
-        history.append(str(first)+" "+ operator +" "+str(second) +" = "+ str(result))
+        print(result)  
     elif operator == "-":
         result = soustraction(first,second)
-        print(result)
-        history.append(str(first)+" "+ operator +" "+str(second) +" = "+ str(result))
+        print(result)   
     elif operator == "*":
         result = multiplication(first,second)
-        print(result)
-        history.append(str(first)+" "+ operator +" "+str(second) +" = "+ str(result))
+        print(result)       
     elif operator == "/":
         try:
             result = division(first,second)
@@ -50,15 +46,14 @@ while True:
             print("Cannot division by Zero")
             continue
         print(result)
-        history.append(str(first)+" "+ operator +" "+str(second) +" = "+ str(result))
-
     else : 
         print("Invalid operator")
         continue
     
-    next = input("Do you want continue, leave or the history? (c,l,h): ")
-    if next == "n":
-        break
-    elif next == "h":
+    history.append(f"{first} {operator} {second} = {result}")
+    
+    next = input("Continue (yes, no)? : ")
+    if next in ["no","n"]:
         for history in history:
             print(history)
+        break
